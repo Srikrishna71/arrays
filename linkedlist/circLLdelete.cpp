@@ -10,8 +10,11 @@ void deletenodes(node* tail,int value){
             curr = curr->next;
         }
         prev->next=curr->next;
+        if(curr==prev){
+            tail=NULL;  // 1 node
+        }
         if(tail==curr){
-            tail = prev;
+            tail = prev; // more than 1
         }
         curr->next=NULL;
         delete curr;
