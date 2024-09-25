@@ -38,6 +38,19 @@ void insertatposition(node* &tail,node* &head, int pos,int d){
     nodetoinsert->next = temp->next;
     temp->next = nodetoinsert;
 }
+void searchNode(node* head, int value) {
+    node* temp = head;
+    int position = 1;  // Position from head
+
+    // Traverse the linked list to find the value
+    while (temp != NULL) {
+        if (temp->data == value) {
+            cout << "Node with value " << value << " found at position " << position << " from head." << endl;
+            return;
+        }
+        temp = temp->next;
+        position++;
+}
 void print(node* head){
     node* temp = head;
     while(temp!=NULL){
