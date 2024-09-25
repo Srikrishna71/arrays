@@ -13,7 +13,7 @@ void deletenodes(node* tail,int value){
         if(curr==prev){
             tail=NULL;  // 1 node
         }
-        if(tail==curr){
+        else if(tail==curr){
             tail = prev; // more than 1
         }
         curr->next=NULL;
